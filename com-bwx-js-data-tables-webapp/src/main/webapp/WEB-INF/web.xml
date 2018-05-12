@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="3.0">
+
+	<!-- Listener -->
+	<listener>
+		<listener-class>com.bwx.datatables.webapp.MvcServlet</listener-class>
+	</listener>
+
+	<!-- Minimum Columns -->
+	<context-param>
+		<description>Minimum number of columns to be randomly generated.</description>
+		<param-name>minColumns</param-name>
+		<param-value>1</param-value>
+	</context-param>
+
+	<!-- Maximum Columns -->
+	<context-param>
+		<description>Maximum number of columns to be randomly generated.</description>
+		<param-name>maxColumns</param-name>
+		<param-value>5</param-value>
+	</context-param>
+	
+	<!-- Replications -->
+	<context-param>
+		<description>Number of table replications for each column count to be randomly generated.</description>
+		<param-name>replications</param-name>
+		<param-value>2</param-value>
+	</context-param>
+	
+</web-app>
